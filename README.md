@@ -1,0 +1,2 @@
+# domainmodelingbyfnts
+ 関数型ドメインモデリングを読んでそれぽく実装してみたやつ
