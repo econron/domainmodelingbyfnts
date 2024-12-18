@@ -9,18 +9,25 @@ export interface LessonBase {
 }
 
 // 教師が検証された状態
-export interface TeacherValidatedLesson extends LessonBase {
+export interface TeacherValidatedLesson {
+  teacher_id: string;
   teacher_status: 'active';
 }
 
 // 時間が検証された状態
-export interface TimeValidatedLesson extends TeacherValidatedLesson {
+export interface TimeValidatedLesson {
+  teacher_id: string;
+  teacher_status: 'active';
   start_at: number;
   end_at: number;
 }
 
 // 完成されたレッスン状態
-export interface OpenedLesson extends TimeValidatedLesson {
+export interface OpenedLesson {
+  teacher_id: string;
+  teacher_status: 'active';
+  start_at: number;
+  end_at: number;
   status: 'opened';
 }
 
