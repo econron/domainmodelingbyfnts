@@ -1,16 +1,14 @@
 import express from 'express';
-import { getTeacherById, saveLesson, DatabaseError } from './repository';
+import { getTeacherById, saveLesson } from './repository';
 import { 
   DomainError, 
   LessonBase, 
-  TeacherValidatedLesson, 
-  TimeValidatedLesson, 
   OpenedLesson, 
   validateTeacherStatus, 
   validateLessonTimes, 
   createOpenedLesson 
 } from './domain';
-import { Result, ok, err, ResultAsync } from 'neverthrow';
+import { Result, ResultAsync } from 'neverthrow';
 
 const app = express();
 app.use(express.json());

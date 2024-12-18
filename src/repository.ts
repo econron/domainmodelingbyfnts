@@ -1,10 +1,8 @@
 import { Kysely, MysqlDialect } from 'kysely';
 import { createPool } from 'mysql2';
-import { Result, ok, err, ResultAsync } from 'neverthrow';
+import { Result, ok, err } from 'neverthrow';
 import { DomainError, OpenedLesson } from './domain/domain';
 import { uuidv7 } from "uuidv7";
-
-export type DatabaseError = 'DatabaseError' | 'TeacherNotFoundError' | 'OpenLessonError';
 
 // データベースインターフェース
 interface Database {
