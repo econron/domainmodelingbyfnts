@@ -8,6 +8,7 @@
 # setup
 
 ```sh
+docker compose up -d --build
 npm i
 npm run dev
 ```
